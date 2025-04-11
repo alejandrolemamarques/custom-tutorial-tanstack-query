@@ -52,3 +52,41 @@
     background-color: #3a3f4a;
     color: #fff;
 }
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    /* Adjust breakpoint as needed */
+    .pageContainer {
+        flex-direction: column; /* Stack menu and content */
+        padding: 1rem; /* Reduce padding */
+        margin: 1rem auto;
+        align-items: stretch; /* Make items stretch */
+    }
+
+    .sideMenu {
+        flex: 0 0 auto; /* Remove fixed width */
+        width: 100%; /* Make menu full width */
+        position: static; /* Remove sticky positioning */
+        height: auto; /* Reset height */
+        overflow-y: visible; /* Reset overflow */
+        border-right: none; /* Remove side border */
+        border-bottom: 1px solid #444; /* Add bottom border */
+        padding-right: 0; /* Remove padding */
+        margin-bottom: 1.5rem; /* Add space below menu */
+    }
+
+    .contentArea {
+        /* No specific changes needed here for stacking */
+    }
+
+    .heading {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.75rem;
+    }
+
+    .menuItem a {
+        font-size: 1rem; /* Slightly larger font for mobile menu */
+        padding: 0.8rem 0.5rem;
+    }
+}

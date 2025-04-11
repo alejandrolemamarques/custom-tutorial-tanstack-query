@@ -106,3 +106,43 @@
     border-radius: 4px;
     margin-top: 1rem;
 }
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    /* Stack columns on smaller screens */
+    .container {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+
+    .descriptionColumn,
+    .exampleColumn {
+        min-width: initial;
+        width: 100%;
+    }
+
+    .exampleColumn {
+        padding: 1rem;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+
+    .subHeading {
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+    }
+
+    .inputGroup {
+        flex-wrap: wrap; /* Allow wrapping */
+    }
+
+    .button {
+        /* Ensure button doesn't stretch excessively when wrapped */
+        flex-shrink: 0;
+    }
+}

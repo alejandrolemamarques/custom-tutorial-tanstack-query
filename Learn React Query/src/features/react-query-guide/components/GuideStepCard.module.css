@@ -51,3 +51,26 @@
     margin-top: 0.5rem; /* Space above nested list */
     margin-left: 1rem; /* Further indent nested list */
 }
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .card {
+        padding: 1rem; /* Reduce padding */
+        margin-bottom: 1.5rem;
+        scroll-margin-top: 1rem; /* Adjust scroll margin */
+    }
+
+    .card h3 {
+        font-size: 1.1rem; /* Adjust heading size */
+    }
+
+    .card p {
+        font-size: 0.9rem; /* Adjust paragraph font size */
+        line-height: 1.6;
+    }
+
+    /* Ensure code blocks are scrollable if they overflow horizontally */
+    pre[class*="language-"] {
+        overflow-x: auto;
+    }
+}

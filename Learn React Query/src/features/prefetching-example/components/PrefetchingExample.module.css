@@ -130,3 +130,21 @@
     margin-top: 1rem;
     font-weight: bold;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column; /* Stack columns vertically */
+        gap: 1rem; /* Reduce gap between stacked columns */
+    }
+
+    .listColumn,
+    .detailsColumn {
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .container {
+        padding: 1rem; /* Adjust container padding */
+        margin: 1rem auto;
+    }
+}

@@ -96,3 +96,51 @@
     margin-top: 1rem;
     text-align: center;
 }
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    /* Stack columns on smaller screens */
+    .container {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+
+    .descriptionColumn,
+    .exampleColumn {
+        min-width: initial;
+        width: 100%;
+    }
+
+    .exampleColumn {
+        padding: 1rem;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+
+    .paginationControls {
+        flex-direction: column; /* Stack controls vertically */
+        gap: 1rem; /* Add gap between stacked items */
+        align-items: stretch; /* Make items take full width */
+    }
+
+    .button {
+        width: 100%; /* Make buttons full width */
+        text-align: center;
+        font-size: 0.9rem;
+        padding: 0.7rem 1rem;
+    }
+
+    .pageInfo {
+        text-align: center; /* Center page info text */
+        order: -1; /* Move page info above buttons visually */
+        margin-bottom: 0.5rem;
+    }
+
+    .itemList {
+        min-height: 200px; /* Reduce min-height */
+    }
+}

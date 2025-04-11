@@ -101,3 +101,32 @@
     font-size: 0.9em;
     color: #eee;
 }
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem; /* Reduce padding */
+        margin: 1rem auto;
+    }
+
+    .heading {
+        font-size: 1.5rem; /* Adjust heading size */
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.75rem;
+    }
+
+    .infoCard {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Adjust table font size and padding */
+    .infoCard table {
+        font-size: 0.9em;
+    }
+
+    .infoCard th,
+    .infoCard td {
+        padding: 0.5rem 0.75rem;
+    }
+}

@@ -41,8 +41,31 @@
 
 .navbar {
     background-color: #222;
-    padding: 1rem 2rem;
+    padding: 0.75rem 2rem; /* Adjust padding */
     margin-bottom: 2rem;
+    display: flex; /* Use flexbox */
+    align-items: center; /* Vertically center items */
+    gap: 2rem; /* Add gap between logo and links */
+}
+
+/* Logo Styles */
+.logoLink {
+    display: inline-block; /* Allow setting height/width */
+    line-height: 0; /* Prevent extra space below image */
+}
+
+.logoImage {
+    height: 40px; /* Adjust height as needed */
+    width: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space */
+}
+
+/* Container for the link lists */
+.navLinksContainer {
+    flex-grow: 1; /* Allow link container to take remaining space */
+    display: flex;
+    flex-direction: column; /* Stack main and example lists */
+    align-items: center; /* Center lists horizontally */
 }
 
 .navList {
@@ -94,4 +117,41 @@
     color: #fff;
     text-decoration: none; /* Remove underline, rely on color/background */
     background-color: rgba(97, 218, 251, 0.2); /* Highlight active/hover */
+}
+
+/* --- Responsive Styles --- */
+@media (max-width: 768px) {
+    /* Adjust breakpoint as needed */
+    .navbar {
+        flex-direction: column; /* Stack logo and links vertically */
+        gap: 1rem; /* Reduce gap */
+        padding: 1rem; /* Adjust padding */
+    }
+
+    .logoLink {
+        margin-bottom: 0.5rem; /* Add some space below logo */
+    }
+
+    .navLinksContainer {
+        width: 100%; /* Allow links container to take full width */
+    }
+
+    .navListMain {
+        gap: 1rem; /* Reduce gap between main links */
+        margin-bottom: 0.75rem; /* Reduce margin */
+        padding-bottom: 0.75rem; /* Reduce padding */
+        justify-content: space-around; /* Spread out links a bit more */
+    }
+
+    .navListMain .navLink {
+        font-size: 1.1rem; /* Slightly smaller main links */
+    }
+
+    .navListExamples {
+        gap: 0.5rem 1rem; /* Reduce gaps for example links */
+    }
+
+    .navLink {
+        font-size: 0.95rem; /* Slightly smaller example links */
+    }
 }

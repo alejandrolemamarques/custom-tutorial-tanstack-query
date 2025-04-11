@@ -106,3 +106,37 @@
     margin-top: 1rem;
     text-align: center;
 }
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    /* Breakpoint when columns might get too narrow */
+    .container {
+        flex-direction: column; /* Stack columns */
+        gap: 1.5rem;
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+
+    .descriptionColumn,
+    .exampleColumn {
+        min-width: initial; /* Remove min-width */
+        width: 100%; /* Make columns full width */
+    }
+
+    .exampleColumn {
+        padding: 1rem;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+
+    .addForm {
+        flex-direction: column; /* Stack input and button */
+        gap: 0.75rem;
+    }
+
+    .button {
+        width: 100%; /* Make button full width */
+    }
+}
