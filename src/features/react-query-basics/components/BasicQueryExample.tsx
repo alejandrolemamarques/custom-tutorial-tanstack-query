@@ -12,7 +12,7 @@ export const BasicQueryExample = () => {
 
     // useQuery hook to fetch and cache data
     const {
-        data: queryData,
+        data: queryData, // Renaming data to queryData
         error: queryError,
         isLoading: queryIsLoading, // True only during initial load or hard refresh
         isFetching, // True whenever a fetch is in progress (initial or background)
@@ -49,13 +49,13 @@ export const BasicQueryExample = () => {
     // Render loading state
     if (queryIsLoading)
         return (
-            <div className={styles.container} style={{ display: "block" }}>
+            <div className={styles.container}>
                 <div className={styles.loadingText}>Loading query data...</div>
             </div>
         );
     if (queryError instanceof Error)
         return (
-            <div className={styles.container} style={{ display: "block" }}>
+            <div className={styles.container}>
                 <div className={styles.errorText}>
                     Query error: {queryError.message}
                 </div>
@@ -124,6 +124,7 @@ export const BasicQueryExample = () => {
                         onClick={handlePost}
                         className={styles.button}
                         disabled={mutation.isPending || !inputText.trim()}
+                        type="button"
                     >
                         {mutation.isPending ? "Posting..." : "Post Data"}
                     </button>

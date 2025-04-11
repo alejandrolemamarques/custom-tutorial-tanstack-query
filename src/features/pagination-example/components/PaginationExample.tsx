@@ -13,6 +13,7 @@ export const PaginationExample = () => {
         error,
         isFetching, // Use isFetching to show loading state without clearing old data
         isPlaceholderData, // Indicates if the displayed data is from a previous page
+        isLoading,
     } = useQuery<PaginatedData, Error>({
         queryKey: ["paginatedData", page], // Include page in the query key
         queryFn: () => fetchPaginatedData(page),
@@ -63,6 +64,12 @@ export const PaginationExample = () => {
 
             <div className={styles.exampleColumn}>
                 <h1 className={styles.heading}>Pagination Example</h1>
+                
+                {isLoading && (
+                    <div className={styles.loadingText}>
+                        Loading data...
+                    </div>
+                )}
 
                 {error instanceof Error && (
                     <div className={styles.errorText}>
