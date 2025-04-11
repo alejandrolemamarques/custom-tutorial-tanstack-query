@@ -6,7 +6,7 @@ export default function Home() {
             <h1 className={styles.title}>Welcome to the Tanstack Query Demo</h1>
             <p className={styles.description}>
                 This application demonstrates various features and patterns
-                using TanStack Query (formerly Tanstack Query).
+                using TanStack Query (formerly React Query).
             </p>
             <p className={styles.instruction}>
                 Use the navigation bar above to explore different examples like
