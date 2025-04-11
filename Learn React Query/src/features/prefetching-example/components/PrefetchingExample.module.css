@@ -1,0 +1,132 @@
+.container {
+    padding: 2rem;
+    margin: 2rem auto;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #1a1a1a;
+    max-width: 900px; /* Wider for two columns */
+}
+
+.container h1 {
+    color: #61dafb;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.container > p {
+    color: #eee;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.layout {
+    display: flex;
+    gap: 2rem;
+}
+
+.listColumn,
+.detailsColumn {
+    flex: 1;
+    padding: 1.5rem;
+    border: 1px solid #333;
+    border-radius: 6px;
+    background-color: #20232a; /* Slightly different background */
+}
+
+.listColumn h2,
+.detailsColumn h2 {
+    color: #ccc;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5rem;
+}
+
+.productList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.productListItem {
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.productListItem.selected {
+    background-color: #3a3f4a;
+}
+
+.productListItem:hover {
+    background-color: #3a3f4a;
+}
+
+.productButton {
+    background: none;
+    border: none;
+    color: #61dafb;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+.productButton:hover {
+    text-decoration: underline;
+}
+
+.detailsColumn p {
+    color: #eee;
+}
+
+.detailsCard {
+    background-color: #282c34;
+    padding: 1rem;
+    border-radius: 4px;
+    border: 1px solid #444;
+}
+
+.detailsCard h3 {
+    color: #61dafb;
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+}
+
+.detailsCard p {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.detailsCard strong {
+    color: #bbb;
+}
+
+.loadingText {
+    color: #aaa;
+    font-style: italic;
+}
+
+.loadingIndicator {
+    background-color: rgba(97, 218, 251, 0.2);
+    color: #61dafb;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: bold;
+    border: 1px solid rgba(97, 218, 251, 0.4);
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.errorText {
+    color: #ff6b6b;
+    background-color: #4d2a2a;
+    border: 1px solid #ff6b6b;
+    padding: 0.75rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+    font-weight: bold;
+}
