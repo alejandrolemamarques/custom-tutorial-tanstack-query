@@ -1,8 +1,21 @@
 import React from "react";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+// Import the light version of Prism
+import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
+// Import only the languages you need
+import tsx from "react-syntax-highlighter/dist/esm/languages/prism/tsx";
+import javascript from "react-syntax-highlighter/dist/esm/languages/prism/javascript";
+import css from "react-syntax-highlighter/dist/esm/languages/prism/css";
+import json from "react-syntax-highlighter/dist/esm/languages/prism/json";
+// Import the style
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
-
 import styles from "./GuideStepCard.module.css";
+
+// Register the languages
+SyntaxHighlighter.registerLanguage("tsx", tsx);
+SyntaxHighlighter.registerLanguage("javascript", javascript);
+SyntaxHighlighter.registerLanguage("js", javascript); // Register alias
+SyntaxHighlighter.registerLanguage("css", css);
+SyntaxHighlighter.registerLanguage("json", json);
 
 // Define the background color from the theme
 const codeBgColor =
@@ -22,13 +35,14 @@ export const GuideStepCard: React.FC<GuideStepCardProps> = ({
     title,
     description,
     codeSnippet,
-    language = "tsx",
+    language = "tsx", // Default language is tsx
     id, // Destructure id
 }) => {
     return (
         <div className={styles.card} id={id}>
             <h3>{`Step ${stepNumber}: ${title}`}</h3>
             {description} {/* Render description content directly */}
+            {/* Use the static SyntaxHighlighter directly */}
             <SyntaxHighlighter
                 language={language}
                 style={vscDarkPlus}

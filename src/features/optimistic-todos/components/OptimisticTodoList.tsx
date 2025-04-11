@@ -54,7 +54,7 @@ export const OptimisticTodoList = () => {
             return { previousTodos };
         },
         // If the mutation fails, use the context we returned from onMutate to roll back
-        onError: (err, newTodo, context) => {
+        onError: (err, _newTodo, context) => {
             console.error("Mutation failed:", err.message);
             if (context?.previousTodos) {
                 queryClient.setQueryData<Todo[]>(
