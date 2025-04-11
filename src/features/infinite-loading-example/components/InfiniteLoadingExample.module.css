@@ -1,0 +1,93 @@
+.container {
+    /* Use Flexbox */
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    /* Remove max-width */
+    /* max-width: 700px; */
+    margin: 2rem auto;
+    align-items: flex-start;
+}
+
+.descriptionColumn {
+    flex: 1;
+    min-width: 300px;
+}
+
+.exampleColumn {
+    flex: 1.5;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #1a1a1a;
+    padding: 1.5rem;
+}
+
+.heading {
+    color: #61dafb;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.itemList {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.item {
+    background-color: #282c34;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    border-left: 3px solid #90ee90; /* Different color for distinction */
+}
+
+.loadMoreContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid #444;
+}
+
+.button {
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #90ee90; /* Match item border */
+    color: #282c34;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    min-width: 180px; /* Give button consistent width */
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #7ccd7c;
+}
+
+.button:disabled {
+    background-color: #555;
+    color: #999;
+    cursor: not-allowed;
+}
+
+.loadingText {
+    color: #aaa;
+    font-style: italic;
+    text-align: center;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.errorText {
+    color: #ff6b6b;
+    background-color: #4d2a2a;
+    border: 1px solid #ff6b6b;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+    text-align: center;
+}

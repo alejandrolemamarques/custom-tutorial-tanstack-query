@@ -1,0 +1,54 @@
+.pageContainer {
+    /* Use Flexbox for overall page layout */
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px; /* Allow more width for side menu */
+    align-items: flex-start;
+}
+
+.sideMenu {
+    flex: 0 0 200px; /* Fixed width for the menu */
+    position: sticky; /* Make menu sticky */
+    top: 2rem; /* Adjust top offset as needed */
+    height: calc(100vh - 4rem); /* Limit height to viewport minus padding */
+    overflow-y: auto; /* Allow scrolling if menu is long */
+    padding-right: 1rem; /* Add some space */
+    border-right: 1px solid #444; /* Separator line */
+}
+
+.contentArea {
+    flex: 1; /* Allow content to take remaining space */
+}
+
+.heading {
+    color: #61dafb;
+    margin-top: 0; /* Remove top margin as it's handled by pageContainer */
+    margin-bottom: 2rem;
+    text-align: center;
+    border-bottom: 1px solid #555;
+    padding-bottom: 1rem;
+}
+
+/* Styles for the menu items */
+.menuList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menuItem a {
+    display: block;
+    padding: 0.6rem 0.5rem;
+    color: #ccc;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.menuItem a:hover {
+    background-color: #3a3f4a;
+    color: #fff;
+}

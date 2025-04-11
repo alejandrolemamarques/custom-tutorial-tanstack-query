@@ -1,0 +1,98 @@
+.container {
+    /* Use Flexbox for side-by-side layout */
+    display: flex;
+    gap: 2rem; /* Space between columns */
+    padding: 2rem;
+    /* Remove max-width to allow flex items to grow */
+    /* max-width: 700px; */
+    margin: 2rem auto;
+    align-items: flex-start; /* Align items at the top */
+}
+
+/* Define columns */
+.descriptionColumn {
+    flex: 1; /* Adjust flex grow/shrink/basis as needed */
+    min-width: 300px; /* Ensure description has some minimum width */
+}
+
+.exampleColumn {
+    flex: 1.5; /* Give example more space if needed */
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #1a1a1a;
+    padding: 1.5rem; /* Add padding to the example column */
+}
+
+.heading {
+    color: #61dafb;
+    margin-top: 0; /* Remove top margin as padding is added to column */
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.itemList {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    min-height: 300px; /* Give some space so layout doesn't jump too much */
+}
+
+.item {
+    background-color: #282c34;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    border-left: 3px solid #61dafb;
+}
+
+.paginationControls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid #444;
+}
+
+.button {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #61dafb;
+    color: #282c34;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.button:hover {
+    background-color: #52c5e9;
+}
+
+.button:disabled {
+    background-color: #555;
+    color: #999;
+    cursor: not-allowed;
+}
+
+.pageInfo {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.loadingText {
+    color: #aaa;
+    font-style: italic;
+    text-align: center;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.errorText {
+    color: #ff6b6b;
+    background-color: #4d2a2a;
+    border: 1px solid #ff6b6b;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+    text-align: center;
+}

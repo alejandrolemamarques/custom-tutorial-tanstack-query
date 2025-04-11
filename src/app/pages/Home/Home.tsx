@@ -1,9 +1,16 @@
-import styles from './Home.module.css';
+import styles from "./Home.module.css";
 
 export default function Home() {
     return (
         <div className={styles.container}>
-            <h1>Home</h1>
+            <h1 className={styles.title}>Welcome to the React Query Demo</h1>
+            <p className={styles.description}>
+                This application demonstrates various features and patterns
+                using TanStack Query (formerly React Query).
+            </p>
+            <p className={styles.instruction}>
+                Use the navigation bar above to explore different examples like basic queries, pagination, infinite loading, optimistic updates, etc.
+            </p>
         </div>
     );
 }
