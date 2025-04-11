@@ -1,1 +1,0 @@
-import{j as s}from"./index-CROjpMMh.js";const t="_descriptionBox_15nfd_1",n={descriptionBox:t},e=({title:o,children:i})=>s.jsxs("div",{className:n.descriptionBox,children:[s.jsx("h3",{children:o}),i]});export{e as D};
